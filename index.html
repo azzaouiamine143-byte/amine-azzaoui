@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#030507">
+<title>AMINE AZZAOUI // ENGINEER 2100</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js",
+    "three/webgpu": "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.webgpu.js",
+    "three/tsl": "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.tsl.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/"
+  }
+}
+</script>
+</head>
+<body>
+<div id="boot">
+  <div class="boot-grid"></div>
+  <div class="boot-core">
+    <div class="boot-mark">AA<span>/2100</span></div>
+    <div class="boot-line"><i></i></div>
+    <div class="boot-status">INITIALIZING NEURAL INTERFACE</div>
+  </div>
+</div>
+
+<canvas id="scene"></canvas>
+<div class="noise"></div>
+<div class="scanlines"></div>
+<div class="vignette"></div>
+
+<header class="hud">
+  <a class="brand" href="#home"><span>AA</span><b>/2100</b></a>
+  <nav>
+    <a href="#systems">01 / SYSTEMS</a>
+    <a href="#projects">02 / PROJECTS</a>
+    <a href="#about">03 / PROFILE</a>
+    <a href="#contact">04 / CHANNEL</a>
+  </nav>
+  <button id="mode" class="mode"><span></span> WEBGPU</button>
+</header>
+
+<main>
+<section id="home" class="hero">
+  <div class="hero-left">
+    <p class="eyebrow"><span class="pulse"></span> ELECTRICAL ENGINEERING // AUTOMATION</p>
+    <h1>AMINE<br><em>AZZAOUI</em></h1>
+    <p class="hero-copy">I build systems where <strong>machines think</strong>, environments respond, and engineering becomes an interface.</p>
+    <div class="hero-actions">
+      <a href="#projects" class="hyper">ENTER PROJECT MATRIX <span>↗</span></a>
+      <a href="#contact" class="ghost">OPEN CHANNEL</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="orbital">
+      <div class="orbital-label">ENGINEERING<br>NODE</div>
+      <div class="orbit o1"></div><div class="orbit o2"></div><div class="orbit o3"></div>
+      <div class="core"><span>AA</span></div>
+      <div class="orbit-data d1">PLC // 01</div>
+      <div class="orbit-data d2">ROBOTICS // 02</div>
+      <div class="orbit-data d3">EMBEDDED // 03</div>
+    </div>
+  </div>
+  <div class="hero-bottom">
+    <span>Jiangsu Normal University · China</span>
+    <span>24.3°N / 118.7°E</span>
+    <span id="clock">00:00:00</span>
+  </div>
+</section>
+
+<section id="systems" class="section systems">
+  <div class="section-head">
+    <span>01</span><h2>SYSTEM ARCHITECTURE</h2><small>LIVE NODE MAP</small>
+  </div>
+  <div class="system-layout">
+    <div class="system-copy">
+      <p class="giant">ENGINEERING<br><span>AS A SYSTEM.</span></p>
+      <p>I work across the layers between physical machines and digital logic: control, embedded electronics, robotics, simulation and human interaction.</p>
+    </div>
+    <div class="node-map">
+      <div class="node center">CORE</div>
+      <div class="node n1">PLC</div><div class="node n2">HMI</div><div class="node n3">ROBOT</div>
+      <div class="node n4">C / C++</div><div class="node n5">ARDUINO</div><div class="node n6">MATLAB</div>
+      <svg viewBox="0 0 700 500" preserveAspectRatio="none">
+        <path d="M350 250L115 105M350 250L570 95M350 250L610 250M350 250L100 380M350 250L350 445M350 250L590 400"/>
+      </svg>
+    </div>
+  </div>
+  <div class="cap-grid">
+    <article><b>01 / CONTROL</b><h3>Automation</h3><p>PLC · TIA Portal · STEP7 · HMI · Factory I/O</p></article>
+    <article><b>02 / MOTION</b><h3>Robotics</h3><p>ABB workflows · RobotStudio · trajectory logic · grippers</p></article>
+    <article><b>03 / EDGE</b><h3>Embedded</h3><p>Arduino · Raspberry Pi · electronics · sensors</p></article>
+    <article><b>04 / MODEL</b><h3>Simulation</h3><p>MATLAB · Simulink · Proteus · Xilinx ISE</p></article>
+  </div>
+</section>
+
+<section id="projects" class="section projects">
+  <div class="section-head">
+    <span>02</span><h2>PROJECT MATRIX</h2><small>SELECT NODE TO INSPECT</small>
+  </div>
+  <div class="project-grid">
+    <article class="project-card active" data-project="robot">
+      <div class="project-index">P-01</div>
+      <div class="project-tag">INDUSTRIAL ROBOTICS</div>
+      <h3>ABB<br>REPLACEMENT</h3>
+      <p>Trajectory creation + custom glass-handling gripper.</p>
+      <div class="project-foot"><span>SAINT-GOBAIN</span><span>↗</span></div>
+    </article>
+    <article class="project-card" data-project="home">
+      <div class="project-index">P-02</div>
+      <div class="project-tag">EMBEDDED / IOT</div>
+      <h3>SMART<br>HOME</h3>
+      <p>Raspberry Pi + Arduino automation architecture.</p>
+      <div class="project-foot"><span>PERSONAL LAB</span><span>↗</span></div>
+    </article>
+    <article class="project-card" data-project="future">
+      <div class="project-index">P-03</div>
+      <div class="project-tag">NEXT SYSTEM</div>
+      <h3>BUILDING<br>THE NEXT</h3>
+      <p>Exploring intelligent machines, automation and human-machine interfaces.</p>
+      <div class="project-foot"><span>IN DEVELOPMENT</span><span>↗</span></div>
+    </article>
+  </div>
+  <div class="project-console">
+    <div class="console-top"><span>PROJECT TELEMETRY</span><span id="project-id">P-01 // ROBOT</span></div>
+    <div class="telemetry">
+      <div><small>DOMAIN</small><strong id="t-domain">INDUSTRIAL ROBOTICS</strong></div>
+      <div><small>STACK</small><strong id="t-stack">ABB · ROBOTSTUDIO · MECHANICAL DESIGN</strong></div>
+      <div><small>ROLE</small><strong id="t-role">TRAJECTORY + GRIPPER SYSTEM</strong></div>
+    </div>
+    <div class="wave"><canvas id="wave"></canvas></div>
+  </div>
+</section>
+
+<section id="about" class="section profile">
+  <div class="section-head"><span>03</span><h2>PROFILE / HUMAN LAYER</h2><small>IDENTITY FILE</small></div>
+  <div class="profile-grid">
+    <div class="identity">
+      <div class="avatar"><span>AA</span><i>22</i></div>
+      <h3>AMINE AZZAOUI</h3>
+      <p>Electrical Engineering & Automation</p>
+      <div class="identity-line"></div>
+      <p class="muted">Student · Builder · Organizer · Systems thinker</p>
+    </div>
+    <div class="timeline">
+      <div><div><b>2024—2028</b><strong>Jiangsu Normal University</strong><span>Bachelor · Electrical Engineering & Automation</span></div></div>
+      <div><div><b>2022—2024</b><strong>École Supérieure de Technologie</strong><span>DUT · Informatique Industrielle & Systèmes Automatisés</span></div></div>
+      <div><div><b>2020—2022</b><strong>Lycée Technique Imam El Ghazali</strong><span>Baccalauréat · Sciences & Technologies Électriques</span></div></div>
+    </div>
+  </div>
+  <div class="roles">
+    <span>MEDIA DEPARTMENT PRESIDENT</span><span>MULTIMEDIA CLUB PRESIDENT</span><span>STUDENT COUNCIL VP</span>
+  </div>
+</section>
+
+<section id="contact" class="section contact">
+  <div class="section-head"><span>04</span><h2>OPEN CHANNEL</h2><small>TRANSMISSION READY</small></div>
+  <div class="contact-main">
+    <p class="giant">LET'S BUILD<br><em>WHAT'S NEXT.</em></p>
+    <a class="mail" href="mailto:azzaouiamine143@gmail.com">azzaouiamine143@gmail.com <span>↗</span></a>
+  </div>
+  <div class="contact-footer">
+    <span>AVAILABLE FOR ENGINEERING · ROBOTICS · AUTOMATION · RESEARCH</span>
+    <span>© 2100 / AMINE AZZAOUI</span>
+  </div>
+</section>
+</main>
+
+<div class="cursor"><span></span></div>
+<div class="project-modal" id="modal">
+  <div class="modal-inner">
+    <button id="close">×</button>
+    <small id="m-tag">PROJECT</small>
+    <h2 id="m-title">ABB REPLACEMENT</h2>
+    <p id="m-copy"></p>
+    <div id="m-points"></div>
+  </div>
+</div>
+
+<script type="module" src="./app.js"></script>
+</body>
+</html>
